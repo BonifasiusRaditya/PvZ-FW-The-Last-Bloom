@@ -12,3 +12,4 @@ E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\obj\Debug\net8.0\refint\PvZApp.dll
 E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\obj\Debug\net8.0\PvZApp.pdb
 E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\obj\Debug\net8.0\PvZApp.genruntimeconfig.cache
 E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\obj\Debug\net8.0\ref\PvZApp.dll
+E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\obj\Debug\net8.0\PvZApp.sourcelink.json

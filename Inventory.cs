@@ -21,10 +21,24 @@ public class Inventory<T> where T : class
 
     public void ShowInventory()
     {
-        Console.WriteLine($"Inventory contains {typeof(T).Name}s:");
+        Console.WriteLine($"Inventory contains {typeof(T).Name}:");
         foreach (var item in items)
         {
-            Console.WriteLine(item);
+            // Check if the item is of type Plants
+            if (item is Plants plant)
+            {
+                Console.WriteLine(plant.Name);  // Print the Name of the plant
+            }
+            // Check if the item is of type Items
+            else if (item is Items inventoryItem)
+            {
+                Console.WriteLine(inventoryItem.Name);  // Print the Name of the item
+            }
+            else
+            {
+                Console.WriteLine(item);  // Default, in case of other types
+            }
+            Console.WriteLine();
         }
     }
 }
