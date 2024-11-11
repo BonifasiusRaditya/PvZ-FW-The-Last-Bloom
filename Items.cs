@@ -1,6 +1,8 @@
 public class Items
 {
     public string Name { get; set; }
+    public ItemType Type { get; set; }
+
     public enum ItemType {
         SingleUse,
         Treasures,
@@ -9,8 +11,8 @@ public class Items
 
     public Items(string name, ItemType type)
     {
+        Type = type;
         Name = name;
-        ItemType = type;
     }
 
     public void showDescription()
