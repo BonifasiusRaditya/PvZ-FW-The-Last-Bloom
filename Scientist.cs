@@ -5,8 +5,11 @@ public class Scientist
     private Inventory<Plants> PlantsInventory { get; set; }
     private Inventory<Items> ItemsInventory { get; set; }
 
-    private Scientist()
+    public string name;
+
+    private Scientist(string name)
     {
+        this.name = name;
         PlantsInventory = new Inventory<Plants>();
         ItemsInventory = new Inventory<Items>();
     }
@@ -15,10 +18,12 @@ public class Scientist
     {
         if (instance == null)
         {
-            instance = new Scientist();
-            Console.WriteLine("Axel has been created.");
+            Console.WriteLine("Enter Scientist's name: ");
+            string scientistName = Console.ReadLine();
+            instance = new Scientist(scientistName);
+            Console.WriteLine($"Welcome, {scientistName}!");
         }
-        return instance;
+        return instance ?? throw new InvalidOperationException("Scientist instance could not be created.");
     }
 
     public void AddPlant(Plants plant)

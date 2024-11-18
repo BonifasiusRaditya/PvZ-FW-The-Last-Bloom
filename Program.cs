@@ -3,6 +3,7 @@ using System.Threading;
 
 class Program
 {
+    static bool exit = false;
     public Program()
     {
 
@@ -10,19 +11,31 @@ class Program
 
     static void Main(string[] args)
     {
-        Scientist Axel = Scientist.GetInstance();
-        
-        bool running = true;
+        Start();
+        if(exit == true)
+        {
+            return;
+        }
+        else
+        {
+            Console.WriteLine("Game Started");
+        }
+    }
+    
+    static void Start()
+    {
+        Scientist AxelAdrialPazaKalembang = Scientist.GetInstance();
+    
 
-        Axel.AddPlant(PlantFactory.CreatePlant("Sunflower"));
+        AxelAdrialPazaKalembang.AddPlant(PlantFactory.CreatePlant("Sunflower"));
 
-        Axel.ShowInventory();
+        AxelAdrialPazaKalembang.ShowInventory();
 
         Thread.Sleep(3000);
-
-        while(running)
-        {
+        
             Console.Clear();
+            Thread.Sleep(1300);
+            Console.WriteLine("The name that will save the world: " + AxelAdrialPazaKalembang.name);
             Console.WriteLine("Plants vs Zombies: The Last Bloom" + "\n");
             Thread.Sleep(1300);
             Console.WriteLine("Main Menu");
@@ -37,15 +50,16 @@ class Program
                 case "1":
                     Console.WriteLine("\nStarting Game...");
                     Thread.Sleep(1300);
+                    exit = false;
                     break;
                 case "2":
                     Console.WriteLine("Exiting Game...");
                     Thread.Sleep(1300);
-                    running = false;
+                    Console.WriteLine("Thanks For Playing!!");
+                    exit = true;
                     break;
             }
-        }
+        
     }
-    
     
 }

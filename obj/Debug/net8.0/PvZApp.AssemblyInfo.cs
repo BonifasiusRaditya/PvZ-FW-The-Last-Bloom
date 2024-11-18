@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PvZApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5229c8092ba8b3f16c9c6a07298377e873afcef4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4235d9f373a861f7ea55a211bc00bb94bbcee555")]
 [assembly: System.Reflection.AssemblyProductAttribute("PvZApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PvZApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
