@@ -80,6 +80,13 @@ namespace MyNamespace {
             if (enemy.Health <= 0) {
                     Console.WriteLine("You win");
                     player.Exp += enemy.Exp;
+                    if(player.Exp >= 100*player.Level){ {
+                        player.Level++;
+                        player.Exp = 0;
+                        player.Health += 50;
+                        player.AttackDamage += 5;
+                        player.Shield += 5;
+                    }
                 }
         }
     }
