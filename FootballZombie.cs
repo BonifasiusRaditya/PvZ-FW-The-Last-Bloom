@@ -1,24 +1,15 @@
-public class FootballZombie : Zombie
-{
-    public FootballZombie()
-    {
-        Name = "Football Zombie";
-        Health = 15;
-        power = 15;
-    }
+using ElementType; 
+namespace MyNamespace;
 
-    public override void TakeDamage(int damage)
-    {
-        Health -= damage;
-        if (Health <= 0)
-        {
-            Console.WriteLine("Football Zombie has been defeated!");
-        }
-    }
-
-    public override void Attack()
-    {
-        Console.WriteLine("Football Zombie is attacking!");
-        //tambahin damage calculation?
+public class FootballZombie : Entity{
+    public FootballZombie(){
+        Name = "FootballZombie";
+        AttackDamage = 15;
+        Health = 100;
+        Exp = 20;
+        Shield = 0;
+        Level = 2;
+        TypeElement = Element.Normal;
+        Description("A plant that shoots out darkness");
     }
 }

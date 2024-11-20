@@ -1,56 +1,30 @@
-public class Scientist
-{
-    private static Scientist? instance;
+using MyNamespace;
+using ElementType;
 
-    private Inventory<Plants> PlantsInventory { get; set; }
-    private Inventory<Items> ItemsInventory { get; set; }
-
-    public string name;
-
-    private Scientist(string name)
-    {
-        this.name = name;
-        PlantsInventory = new Inventory<Plants>();
-        ItemsInventory = new Inventory<Items>();
+public class Scientist : Entity {
+    public List<Entity> Plants;
+    
+    // Konstruktor untuk kelas Scientist
+    public Scientist(string name) {
+        Name = name;  // Mengatur properti Name yang diwarisi dari Entity
+        Plants = new List<Entity>();
+        AttackDamage = 1;
+        Health = 100;
+        Shield = 5;
+        Exp = 0;
+        Level = 2;
+        TypeElement = Element.Normal;
     }
 
-    public static Scientist GetInstance()
-    {
-        if (instance == null)
-        {
-            Console.WriteLine("Enter Scientist's name: ");
-            string scientistName = Console.ReadLine();
-            instance = new Scientist(scientistName);
-            Console.WriteLine($"Welcome, {scientistName}!");
-        }
-        return instance ?? throw new InvalidOperationException("Scientist instance could not be created.");
+    // Fungsi untuk menambahkan item
+    public void AddItem(Entity item) {
+        Plants.Add(item);
+        Console.WriteLine($"{item.Name} added to inventory");
+        Thread.Sleep(2000);
     }
 
-    public void AddPlant(Plants plant)
-    {
-        PlantsInventory.AddItem(plant);
-    }
-
-    public void RemovePlant(Plants plant)
-    {
-        PlantsInventory.RemoveItem(plant);
-    }
-
-    public void AddItem(Items item)
-    {
-        ItemsInventory.AddItem(item);
-    }
-    public void RemoveItem(Items item)
-    {
-        ItemsInventory.RemoveItem(item);
-    }
-
-    public void ShowInventory()
-    {
-        Console.WriteLine("Plants Inventory:");
-        PlantsInventory.ShowInventory();
-
-        Console.WriteLine("Items Inventory:");
-        ItemsInventory.ShowInventory();
+    // Fungsi untuk menghapus item
+    public void RemoveItem(Entity item) {
+        Plants.Remove(item);
     }
 }

@@ -1,0 +1,30 @@
+/Users/raditya/Documents/Kuliah/Semester_3/game/bin/Debug/net9.0/game
+/Users/raditya/Documents/Kuliah/Semester_3/game/bin/Debug/net9.0/game.deps.json
+/Users/raditya/Documents/Kuliah/Semester_3/game/bin/Debug/net9.0/game.runtimeconfig.json
+/Users/raditya/Documents/Kuliah/Semester_3/game/bin/Debug/net9.0/game.dll
+/Users/raditya/Documents/Kuliah/Semester_3/game/bin/Debug/net9.0/game.pdb
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/game.GeneratedMSBuildEditorConfig.editorconfig
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/game.AssemblyInfoInputs.cache
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/game.AssemblyInfo.cs
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/game.csproj.CoreCompileInputs.cache
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/game.sourcelink.json
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/game.dll
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/refint/game.dll
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/game.pdb
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/game.genruntimeconfig.cache
+/Users/raditya/Documents/Kuliah/Semester_3/game/obj/Debug/net9.0/ref/game.dll
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.exe
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.deps.json
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.runtimeconfig.json
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.dll
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.pdb
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.GeneratedMSBuildEditorConfig.editorconfig
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.AssemblyInfoInputs.cache
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.AssemblyInfo.cs
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.csproj.CoreCompileInputs.cache
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.sourcelink.json
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.dll
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\refint\game.dll
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.pdb
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.genruntimeconfig.cache
+E:\Tugas Kuliah\Term 3\OOP\PvZ\Radit\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\ref\game.dll
