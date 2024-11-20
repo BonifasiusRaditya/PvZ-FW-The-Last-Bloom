@@ -2,7 +2,7 @@ using ElementType;
 namespace MyNamespace;
 
 public class Entity{
-    required public string Name { get; set; }
+    public string Name { get; set; }
     public int AttackDamage { get; set; }
     public int Health { get; set; }
     public int Exp { get; set; }
@@ -23,7 +23,20 @@ public class Entity{
         return rand.Next(1, 4);
     }
 
-    public virtual void Description(string desc){
-        Console.WriteLine($"{Name}: {desc}");
+    public void Description(string description){
+        Console.WriteLine(description);
+    }
+
+    public virtual void Display(){
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Attack Damage: {AttackDamage}");
+        Console.WriteLine($"Health: {Health}");
+        Console.WriteLine($"Exp: {Exp}");
+        Console.WriteLine($"Level: {Level}");
+        Console.WriteLine($"Type Element: {TypeElement}");
+    }
+
+    public int shielded(int Health, int shield){
+        return Health + shield;
     }
 }

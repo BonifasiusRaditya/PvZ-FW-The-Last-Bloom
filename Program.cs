@@ -2,22 +2,6 @@
 using ElementType;
 using MyNamespace; 
 
-public class Entity {
-    public string Name { get; set; }
-
-    // Konstruktor Entity
-    public Entity(string name) {
-        Name = name;
-    }
-}
-
-public class Scientist : Entity {
-    // Konstruktor Scientist
-    public Scientist(string name) : base(name) {
-        // Logika tambahan untuk Scientist
-    }
-}
-
 class Program {
     static void Main(string[] args) {
         Console.WriteLine("====================================");
@@ -43,6 +27,11 @@ class Program {
                 }
                 Scientist player = new Scientist(name);  // Menyediakan nama pada konstruktor
                 Console.Clear();
+                Console.WriteLine("Choose your weapon: ");
+                Console.WriteLine("1. NigShooter");
+                string choiceWeapon = Console.ReadLine();
+                if(choiceWeapon == "1") player.AddItem(new NigShooter());  
+                Console.Clear();
                 Console.WriteLine("                STAGE 1               ");
                 Console.WriteLine("--------------------------------------");
                 Console.WriteLine("|      A                             |");
@@ -62,9 +51,7 @@ class Program {
                         Console.WriteLine("--------------------------------------");
                         Console.WriteLine("You've encountered a Football Zombie!");
                         Console.WriteLine("--------------------------------------");
-                        Console.WriteLine("Choose your weapon: ");
-                        string chooseWeapon = Console.ReadLine();
-                        Combat.Fight(player, new FootballZombie());  // Mengirim objek yang benar
+                        Combat.Fight(player, new FootballZombie()); 
                         break;
                     case "B":
                         Console.WriteLine("You've encountered a Basketball Zombie!");

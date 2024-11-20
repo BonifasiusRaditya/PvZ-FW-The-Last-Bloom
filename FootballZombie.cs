@@ -3,7 +3,7 @@ namespace MyNamespace;
 
 public class FootballZombie : Entity{
     public FootballZombie(){
-        Name = "NigShooter";
+        Name = "FootballZombie";
         AttackDamage = 15;
         Health = 100;
         Exp = 0;
