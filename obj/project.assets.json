@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\Radit - Copy\\PvZ-FW-The-Last-Bloom\\game.csproj",
+      "projectUniqueName": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\PvZApp\\game.csproj",
       "projectName": "game",
-      "projectPath": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\Radit - Copy\\PvZ-FW-The-Last-Bloom\\game.csproj",
+      "projectPath": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\PvZApp\\game.csproj",
       "packagesPath": "C:\\Users\\Wesley\\.nuget\\packages\\",
-      "outputPath": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\Radit - Copy\\PvZ-FW-The-Last-Bloom\\obj\\",
+      "outputPath": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\PvZApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Wesley\\AppData\\Roaming\\NuGet\\NuGet.Config"

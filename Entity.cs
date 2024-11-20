@@ -22,7 +22,13 @@ public class Entity{
 
     public int Critical(){
         Random rand = new Random();
-        return rand.Next(1, 4);
+        int rng = rand.Next(1, 101);
+        if(rng <= 21){
+            return 2;
+        }
+        else{
+            return 1;
+        }
     }
 
     public void Description(string description){
