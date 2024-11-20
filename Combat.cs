@@ -88,6 +88,7 @@ namespace MyNamespace {
                         player.Shield += 5;
                     }
                 }
+            }
         }
     }
 }
