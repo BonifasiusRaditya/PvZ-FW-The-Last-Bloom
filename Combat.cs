@@ -44,7 +44,7 @@ namespace MyNamespace {
                             Entity plant = scientist.Plants[0];
                             int damage = player.Attack(plant.AttackDamage); 
                             enemy.Health -= damage; 
-                            Console.WriteLine($"You attacked the zombie with {plant.Name}, dealing {damage} damage");
+                            Console.WriteLine($"You attacked the zombie with {plant.Name}, dealing {plant.AttackDamage} damage");
                             Thread.Sleep(1000);
                         } else {
                             Console.WriteLine("No plants in inventory!");
@@ -70,11 +70,11 @@ namespace MyNamespace {
                     Thread.Sleep(1000);
                 }
 
-                Console.Clear();
-                Console.WriteLine($"The zombie attacks you, received {enemy.AttackDamage} damage");
-                player.Health -= enemy.Attack(enemy.AttackDamage);
-                Console.WriteLine("Press any key to continue...");
-                Console.ReadKey();
+                if(option != "showinformation") {
+                    player.Health -= enemy.AttackDamage;
+                    Console.WriteLine($"{enemy.Name} attacked you, dealing {enemy.AttackDamage} damage");
+                    Thread.Sleep(1000);
+                }
             }
 
             if (enemy.Health <= 0) {

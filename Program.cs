@@ -53,35 +53,35 @@ class Program {
 
                 switch(path) {
                     case "A":
+                        Console.Clear();
                         Console.WriteLine("--------------------------------------");
                         Console.WriteLine("You've encountered a Football Zombie!");
                         Console.WriteLine("--------------------------------------");
-                        Console.Clear();
                         Thread.Sleep(1000);
                         Combat.Fight(player, new FootballZombie()); 
                         break;
                     case "B":
+                        Console.Clear();
                         Console.WriteLine("--------------------------------------");
                         Console.WriteLine("You've encountered a Fire Zombie!");
                         Combat.Fight(player, new FireZombie());
                         Console.WriteLine("--------------------------------------");
-                        Console.Clear();
                         Thread.Sleep(1000);
                         break;
                     case "C":
+                        Console.Clear();
                         Console.WriteLine("--------------------------------------");
                         Console.WriteLine("You've encountered a Water Zombie!");
                         Console.WriteLine("--------------------------------------");
                         Combat.Fight(player, new WaterZombie());
-                        Console.Clear();
                         Thread.Sleep(1000);
                         break;
                     case "D":
+                        Console.Clear();
                         Console.WriteLine("--------------------------------------");
                         Console.WriteLine("You've encountered a Light Zombie!");
                         Console.WriteLine("--------------------------------------");
                         Combat.Fight(player, new LightZombie());
-                        Console.Clear();
                         Thread.Sleep(1000);
                         break;
                     default:
