@@ -1,5 +1,5 @@
 namespace MyNamespace {
-    public static class Combat {
+    public static class Combat {       // janlup tambahin yg element effectiveness
         public static void Fight(Entity player, Entity enemy) {
             while (player.Health > 0 && enemy.Health > 0) {
                 Random rand = new Random();
