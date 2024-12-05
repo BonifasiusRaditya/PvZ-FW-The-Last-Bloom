@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\PvZApp\\game.csproj": {}
+    "C:\\Users\\azras\\Documents\\Game\\PvZ-FW-The-Last-Bloom\\game.csproj": {}
   },
   "projects": {
-    "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\PvZApp\\game.csproj": {
+    "C:\\Users\\azras\\Documents\\Game\\PvZ-FW-The-Last-Bloom\\game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\PvZApp\\game.csproj",
+        "projectUniqueName": "C:\\Users\\azras\\Documents\\Game\\PvZ-FW-The-Last-Bloom\\game.csproj",
         "projectName": "game",
-        "projectPath": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\PvZApp\\game.csproj",
-        "packagesPath": "C:\\Users\\Wesley\\.nuget\\packages\\",
-        "outputPath": "E:\\Tugas Kuliah\\Term 3\\OOP\\PvZ\\PvZApp\\obj\\",
+        "projectPath": "C:\\Users\\azras\\Documents\\Game\\PvZ-FW-The-Last-Bloom\\game.csproj",
+        "packagesPath": "C:\\Users\\azras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\azras\\Documents\\Game\\PvZ-FW-The-Last-Bloom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Wesley\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\azras\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"

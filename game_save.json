@@ -1,0 +1,11 @@
+{
+  "PlayerName": "Mel",
+  "PlayerHealth": 25,
+  "PlayerShield": 5,
+  "PlayerExp": 20,
+  "PlayerLevel": 2,
+  "PlayerTypeElement": "Normal",
+  "Inventory": [
+    "NigShooter"
+  ]
+}

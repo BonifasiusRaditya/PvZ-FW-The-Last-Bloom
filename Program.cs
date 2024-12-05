@@ -25,7 +25,7 @@ class Program {
                     Console.WriteLine("Name cannot be empty. You died before you were even born.");
                     return;
                 }
-                Scientist player = new Scientist(name);  // Menyediakan nama pada konstruktor
+                Scientist player = new Scientist(name);
                 Console.WriteLine($"Welcome, {player.Name}!");
                 Thread.Sleep(2000);
                 Story();
@@ -88,9 +88,14 @@ class Program {
                         Console.WriteLine("Invalid input");
                         break;
                 }
+                GameSaveLoad.SaveGame(player);
                 break;
             case "2":
                 Console.WriteLine("Loading game...");
+                Scientist loadedPlayer = GameSaveLoad.LoadGame();
+                if (loadedPlayer != null) {
+                    Console.WriteLine($"Welcome back, {loadedPlayer.Name}!");
+                }
                 break;
             case "3":
                 Console.WriteLine("Option...");

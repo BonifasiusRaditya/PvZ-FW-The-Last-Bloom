@@ -43,3 +43,18 @@ E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\bin\Debug\net9.0\game.dll
 E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\bin\Debug\net9.0\game.pdb
 E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\obj\Debug\net9.0\game.genruntimeconfig.cache
 E:\Tugas Kuliah\Term 3\OOP\PvZ\PvZApp\obj\Debug\net9.0\ref\game.dll
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.exe
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.deps.json
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.runtimeconfig.json
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.dll
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.pdb
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.AssemblyInfoInputs.cache
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.AssemblyInfo.cs
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.csproj.CoreCompileInputs.cache
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.sourcelink.json
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.dll
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\refint\game.dll
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.pdb
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.genruntimeconfig.cache
+C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\ref\game.dll
