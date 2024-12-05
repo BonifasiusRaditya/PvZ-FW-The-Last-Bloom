@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2-Kuliah\\2-Tugas\\2-OOP\\7-PvZ Floral Warfare The Last Bloom\\2\\PvZ-FW-The-Last-Bloom\\game.csproj": {}
+    "D:\\ima\\SEM 3 BISMILLAH\\OOP\\PVZ Game\\PvZ-FW-The-Last-Bloom\\game.csproj": {}
   },
   "projects": {
-    "D:\\2-Kuliah\\2-Tugas\\2-OOP\\7-PvZ Floral Warfare The Last Bloom\\2\\PvZ-FW-The-Last-Bloom\\game.csproj": {
+    "D:\\ima\\SEM 3 BISMILLAH\\OOP\\PVZ Game\\PvZ-FW-The-Last-Bloom\\game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2-Kuliah\\2-Tugas\\2-OOP\\7-PvZ Floral Warfare The Last Bloom\\2\\PvZ-FW-The-Last-Bloom\\game.csproj",
+        "projectUniqueName": "D:\\ima\\SEM 3 BISMILLAH\\OOP\\PVZ Game\\PvZ-FW-The-Last-Bloom\\game.csproj",
         "projectName": "game",
-        "projectPath": "D:\\2-Kuliah\\2-Tugas\\2-OOP\\7-PvZ Floral Warfare The Last Bloom\\2\\PvZ-FW-The-Last-Bloom\\game.csproj",
-        "packagesPath": "C:\\Users\\Mutia Casella\\.nuget\\packages\\",
-        "outputPath": "D:\\2-Kuliah\\2-Tugas\\2-OOP\\7-PvZ Floral Warfare The Last Bloom\\2\\PvZ-FW-The-Last-Bloom\\obj\\",
+        "projectPath": "D:\\ima\\SEM 3 BISMILLAH\\OOP\\PVZ Game\\PvZ-FW-The-Last-Bloom\\game.csproj",
+        "packagesPath": "C:\\Users\\April\\.nuget\\packages\\",
+        "outputPath": "D:\\ima\\SEM 3 BISMILLAH\\OOP\\PVZ Game\\PvZ-FW-The-Last-Bloom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mutia Casella\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\April\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"

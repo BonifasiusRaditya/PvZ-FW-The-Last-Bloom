@@ -58,3 +58,11 @@ C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\refint\game
 C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.pdb
 C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.genruntimeconfig.cache
 C:\Users\azras\Documents\Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\ref\game.dll
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.GeneratedMSBuildEditorConfig.editorconfig
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.AssemblyInfoInputs.cache
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.AssemblyInfo.cs
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.csproj.CoreCompileInputs.cache
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.sourcelink.json
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.dll
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\refint\game.dll
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.pdb
