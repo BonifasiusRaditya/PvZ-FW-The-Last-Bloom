@@ -3,7 +3,7 @@ using ElementType;
 
 public class Scientist : Entity {
     public List<Entity> Plants { get; private set; } 
-  
+
     public Scientist(string name) {
         Name = name; 
         Plants = new List<Entity>();
