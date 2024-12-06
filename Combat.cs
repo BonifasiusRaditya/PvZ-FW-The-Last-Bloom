@@ -60,6 +60,9 @@ namespace MyNamespace {
                                 );
                                 enemy.Health -= damage;
                                 Console.WriteLine($"You attacked the zombie with {plant.Name}, dealing {damage} damage!");
+                                if (rand.Next(1, 101) <= 20) { // 20% chance untuk memberi debuff
+                                    enemy.ApplyDebuff("attackdamage", 5); // Mengurangi damage musuh
+                                }
                             } else {
                                 Console.WriteLine("Invalid choice. No attack performed.");
                             }
@@ -95,6 +98,9 @@ namespace MyNamespace {
                     int enemyDamage = enemy.AttackDamage;
                     player.Health -= enemyDamage;
                     Console.WriteLine($"{enemy.Name} attacked you, dealing {enemyDamage} damage!");
+                    if (rand.Next(1, 101) <= 15) { // 15% chance untuk memberi debuff
+                        player.ApplyDebuff("shield", 3); // Mengurangi shield pemain
+                    }
                 }
 
                 // Mengecek kondisi menang/kalah

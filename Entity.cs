@@ -9,6 +9,7 @@ public class Entity {
     public int Level { get; set; }
     public int Shield { get; set; }
     public Element TypeElement { get; set; }
+    private static Random rand = new Random();
     
     public int Attack(Entity target) {
         double elementMultiplier = ElementEffectiveness.GetMultiplier(this.TypeElement, target.TypeElement);
@@ -24,16 +25,18 @@ public class Entity {
     }
     
     public virtual void TakeDamage(int damage) {
-        Health -= damage;
+        int totalDamage = Math.Max(0, damage - Shield); 
+        Health -= totalDamage;
+        Shield = Math.Max(0, Shield - totalDamage);
         if (Health <= 0) {
             Console.WriteLine($"{Name} has been defeated!");
             Health = 0;
         }
     }
 
+
     // Critical hit
     public int Critical() {
-        Random rand = new Random();
         int rng = rand.Next(1, 101);
         if (rng <= 21) {
             return 2; // 21% chance for critical hit
@@ -115,14 +118,14 @@ public class Entity {
         Console.WriteLine("");
     }
     public void LevelUp() {
-    if (Exp >= 100 * Level) {
-        Level++;
-        Exp = 0;
-        Health += 50;
-        AttackDamage += 5;
-        Shield += 5;
-        Console.WriteLine($"Level up! You are now level {Level}");
+        int nextLevelExp = 100 * (Level + 1); // Level 1 membutuhkan 100 XP, Level 2 membutuhkan 200 XP
+        if (Exp >= nextLevelExp) {
+            Level++;
+            Exp = 0;  // Reset XP or keep remaining XP if needed
+            Health += 50;
+            AttackDamage += 5;
+            Shield += 5;
+            Console.WriteLine($"Level up! You are now level {Level}");
+        }
     }
-}
-
 }
