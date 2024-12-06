@@ -1,3 +1,4 @@
+using System.Runtime;
 using ElementType;
 
 namespace MyNamespace {
@@ -127,7 +128,19 @@ namespace MyNamespace {
 
                 // Musuh menyerang jika pemain tidak memilih ShowInformation atau Run
                 if (option != "showinformation" && option != "run") {
-                    int enemyDamage = enemy.AttackDamage;
+                    Entity target = player;
+                    if (player is Scientist scientist && scientist.Plants.Count > 0) {
+                            int randomPlantIndex = rand.Next(0, scientist.Plants.Count); // Random index
+                            target = scientist.Plants[randomPlantIndex]; // Randomly select a plant
+                            Console.WriteLine($"{enemy.Name} attacked your plant, {target.Name}!");
+                    } else {
+                        Console.WriteLine($"{enemy.Name} attacked you directly!");
+                    }
+                    int enemyDamage = CalculateElementDamage(
+                                    enemy.AttackDamage,
+                                    enemy.TypeElement,
+                                    target.TypeElement
+                                );
                     player.Health -= enemyDamage;
                     Console.WriteLine($"{enemy.Name} attacked you, dealing {enemyDamage} damage!");
                     if (rand.Next(1, 101) <= 15) { // 15% chance untuk memberi debuff
