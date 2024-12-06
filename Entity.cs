@@ -114,4 +114,15 @@ public class Entity {
         Console.WriteLine("====================================");
         Console.WriteLine("");
     }
+    public void LevelUp() {
+    if (Exp >= 100 * Level) {
+        Level++;
+        Exp = 0;
+        Health += 50;
+        AttackDamage += 5;
+        Shield += 5;
+        Console.WriteLine($"Level up! You are now level {Level}");
+    }
+}
+
 }
