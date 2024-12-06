@@ -9,6 +9,7 @@ namespace MyNamespace {
         }
 
         private static readonly Random rand = new Random();
+
         private static void DisplayAtmosphere() {
             switch (rand.Next(1, 4)) {
                 case 1: 
@@ -33,8 +34,9 @@ namespace MyNamespace {
                 Console.WriteLine($"{enemy.Name}'s Health: {enemy.Health}");
                 Console.WriteLine("-------------------------");
                 Console.WriteLine("     Attack, Shield      ");
+                Console.WriteLine("        Use Item         ");
                 Console.WriteLine("          Run            ");
-                Console.WriteLine("     ShowInformation     ");
+                Console.WriteLine("     Show Information    ");
                 Console.WriteLine("-------------------------");
 
                 // Mengecek input pemain
@@ -71,7 +73,36 @@ namespace MyNamespace {
                         }
                     }
                 }
-                // Pemain bertahan
+                // Pemain menggunakan item (Health Potion atau Shield Upgrade)
+                else if (option == "use item") {
+                    if (player is Scientist scientist && scientist.Inventory != null && scientist.Inventory.Count > 0) {
+                        Console.WriteLine("Choose an item to use from your inventory:");
+
+                        // Tampilkan item di inventory
+                        scientist.Inventory.DisplayInventory();  // Menampilkan semua item di inventory
+
+                        int itemChoice;
+                        if (int.TryParse(Console.ReadLine(), out itemChoice) && itemChoice > 0 && itemChoice <= scientist.Inventory.Count) {
+                            // Pilih item dari inventory menggunakan GetItemAt
+                            Item selectedItem = scientist.Inventory.GetItemAt(itemChoice - 1);
+
+                            if (selectedItem != null) {
+                                // Gunakan item pada player (misalnya heal atau shield)
+                                selectedItem.Use(player);  
+                                scientist.Inventory.RemoveItem(selectedItem);  // Hapus item setelah digunakan
+                            } else {
+                                Console.WriteLine("Invalid item choice.");
+                            }
+                        }
+                        else {
+                            Console.WriteLine("Invalid item choice.");
+                        }
+                    }
+                    else {
+                        Console.WriteLine("No items available or inventory is empty.");
+                    }
+                }
+                // Pemain bertahan dengan shield
                 else if (option == "shield") {
                     player.Health = player.Shielded(player.Health, player.Shield);
                     Console.WriteLine("You shielded yourself!");

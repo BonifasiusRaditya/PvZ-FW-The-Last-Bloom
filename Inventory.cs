@@ -1,73 +1,74 @@
 using System;
 using System.Collections.Generic;
-namespace MyNamespace;
 
-// Generic Inventory class for storing items
-public class Inventory<T> where T : Item
+namespace MyNamespace
 {
-    private List<T> items;
-    private int capacity;
-
-    public Inventory(int capacity)
+    public class Inventory<T> where T : Item
     {
-        this.capacity = capacity;
-        items = new List<T>();
-    }
+        private List<T> items;
+        private int capacity;
 
-    // Add item to inventory
-    public bool AddItem(T item)
-    {
-        if (items.Count < capacity)
+        public Inventory(int capacity)
         {
-            items.Add(item);
-            Console.WriteLine($"{item.Name} added to inventory.");
-            return true;
+            this.capacity = capacity;
+            items = new List<T>();
         }
-        else
-        {
-            Console.WriteLine("Inventory is full! Cannot add item.");
-            return false;
-        }
-    }
 
-    // Remove item from inventory
-    public bool RemoveItem(T item)
-    {
-        if (items.Contains(item))
+        // Menambahkan item ke inventory
+        public bool AddItem(T item)
         {
-            items.Remove(item);
-            Console.WriteLine($"{item.Name} removed from inventory.");
-            return true;
+            if (items.Count < capacity)
+            {
+                items.Add(item);
+                Console.WriteLine($"{item.Name} added to inventory.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Inventory is full! Cannot add item.");
+                return false;
+            }
         }
-        else
-        {
-            Console.WriteLine("Item not found in inventory.");
-            return false;
-        }
-    }
 
-    // Display all items in the inventory
-    public void DisplayInventory()
-    {
-        Console.WriteLine("Inventory List:");
-        foreach (var item in items)
+        // Mengambil item berdasarkan index
+        public T GetItemAt(int index)
         {
-            Console.WriteLine($"- {item.Name} (Type: {item.GetType().Name})");
+            if (index >= 0 && index < items.Count)
+            {
+                return items[index];  // Mengembalikan item pada index tertentu
+            }
+            else
+            {
+                return null;  // Jika index tidak valid
+            }
         }
-    }
 
-    // Use an item from the inventory
-    public void UseItem(int index, Entity target)
-    {
-        if (index >= 0 && index < items.Count)
+        // Menampilkan semua item di inventory
+        public void DisplayInventory()
         {
-            T item = items[index];
-            item.Use(target);  
+            Console.WriteLine("Inventory List:");
+            for (int i = 0; i < items.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {items[i].Name}");
+            }
         }
-        else
+
+        public bool RemoveItem(T item)
         {
-            Console.WriteLine("Invalid item index.");
+            if (items.Contains(item))
+            {
+                items.Remove(item);
+                Console.WriteLine($"{item.Name} removed from inventory.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Item not found in inventory.");
+                return false;
+            }
         }
+
+        // Mendapatkan jumlah item di inventory
+        public int Count => items.Count;
     }
 }
-

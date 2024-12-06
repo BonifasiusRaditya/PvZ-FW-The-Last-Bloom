@@ -66,3 +66,10 @@ D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.
 D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.dll
 D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\refint\game.dll
 D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.pdb
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.exe
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.deps.json
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.runtimeconfig.json
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.dll
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.pdb
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.genruntimeconfig.cache
+D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\ref\game.dll

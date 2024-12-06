@@ -15,12 +15,6 @@ public class FreezePea : Entity
         Description("A plant that slows enemies by shooting frozen peas.");
     }
 
-    public override void TakeDamage(int damage)
-    {
-        base.TakeDamage(damage);
-        Console.WriteLine($"{Name} is hit but remains icy cool.");
-    }
-
     // Skill khusus: Slow Enemy
     public void FreezeAttack(Entity target)
     {

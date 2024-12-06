@@ -1,11 +1,14 @@
 {
-  "PlayerName": "Asa",
-  "PlayerHealth": 190,
-  "PlayerShield": 7,
-  "PlayerExp": 0,
+  "PlayerName": "we",
+  "PlayerHealth": 157,
+  "PlayerShield": 4,
+  "PlayerExp": 40,
   "PlayerLevel": 1,
   "PlayerTypeElement": "Normal",
   "Inventory": [
+    "NightShooter",
+    "LightningSnap",
+    "SolarBloom",
     "FireBlaze"
   ]
 }

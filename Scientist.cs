@@ -7,8 +7,9 @@ public class Scientist : Entity {
 
     public Scientist(string name) {
         Name = name; 
-        Plants = new List<Entity>();
-        Inventory = new Inventory<Item>(4);
+        Plants = new List<Entity>(4); //batas kapasitas plants 4
+        Inventory = new Inventory<Item>(2); //kapsistas untuk healing potion dan shield upgrade
+
         AttackDamage = 1;
         Health = 200;
         Shield = 10;
@@ -24,6 +25,12 @@ public class Scientist : Entity {
         }
         Plants.Add(plant);
         Console.WriteLine($"{plant.Name} added to your plant inventory.");
+    }
+
+    public void AddItem(Item item) {
+        if (Inventory.AddItem(item)) {
+            Console.WriteLine($"{item.Name} added to your item inventory.");
+        }
     }
 
     public void RemovePlant(Entity plant) {

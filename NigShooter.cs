@@ -15,12 +15,6 @@ public class NigShooter : Entity
         Description("A plant that shoots dark energy to attack enemies.");
     }
 
-    public override void TakeDamage(int damage)
-    {
-        base.TakeDamage(damage);
-        Console.WriteLine($"{Name} is hit but remains strong.");
-    }
-
     // Skill khusus: Dark Energy Attack
     public void DarkEnergyAttack(Entity target)
     {

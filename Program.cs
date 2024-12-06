@@ -1,9 +1,11 @@
 ﻿using System;
 using ElementType;
-using MyNamespace; 
+using MyNamespace;
 
-class Program {
-    static void Main(string[] args) {
+class Program
+{
+    static void Main(string[] args)
+    {
         Console.WriteLine("====================================");
         Console.WriteLine("| Welcome to PvZ: The Last Bloom   |");
         Console.WriteLine("====================================");
@@ -14,38 +16,70 @@ class Program {
         Console.WriteLine("====================================");
         Console.Write("Choose: ");
         string input = Console.ReadLine();
-        switch(input) {
+        switch (input)
+        {
             case "1":
                 Console.WriteLine("Starting new game...");
                 Console.ReadKey();
                 Console.Clear();
                 Console.WriteLine("Enter your name: ");
                 string name = Console.ReadLine();
-                if (string.IsNullOrEmpty(name)) {
+                if (string.IsNullOrEmpty(name))
+                {
                     Console.WriteLine("Name cannot be empty. You died before you were even born.");
                     return;
                 }
                 Scientist player = new Scientist(name);
+                // Menambahkan 2 item ke inventory item
+                player.AddItem(new HealingPotion()); // Tambahkan HealthPotion
+                player.AddItem(new ShieldUpgrade()); // Tambahkan ShieldUpgrade
                 Console.WriteLine($"Welcome, {player.Name}!");
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
                 Story();
                 Console.Clear();
-                Console.WriteLine("Choose your weapon: ");
+
+                Console.WriteLine("Choose your weapons: (Maximum 4)");
+                int weaponCount = 0;
                 Console.WriteLine("1. NigShooter");
                 Console.WriteLine("2. FreezePea");
                 Console.WriteLine("3. FireBlaze");
                 Console.WriteLine("4. LightningSnap");
                 Console.WriteLine("5. SolarBloom");
                 Console.WriteLine("6. ThornyCactus");
-                
-                string choiceWeapon = Console.ReadLine();
-                if(choiceWeapon == "1") player.AddPlant(new NigShooter()); 
-                if(choiceWeapon == "2") player.AddPlant(new FreezePea()); 
-                if(choiceWeapon == "3") player.AddPlant(new FireBlaze()); 
-                if(choiceWeapon == "4") player.AddPlant(new LightningSnap()); 
-                if(choiceWeapon == "5") player.AddPlant(new SolarBloom()); 
-                if(choiceWeapon == "6") player.AddPlant(new ThornyCactus()); 
-                
+
+                while (weaponCount < 4)
+                {
+                    Console.Write("Choose a weapon: ");
+                    string choiceWeapon = Console.ReadLine();
+
+                    // Menggunakan switch case untuk memilih senjata
+                    switch (choiceWeapon)
+                    {
+                        case "1":
+                            player.AddPlant(new NigShooter());
+                            break;
+                        case "2":
+                            player.AddPlant(new FreezePea());
+                            break;
+                        case "3":
+                            player.AddPlant(new FireBlaze());
+                            break;
+                        case "4":
+                            player.AddPlant(new LightningSnap());
+                            break;
+                        case "5":
+                            player.AddPlant(new SolarBloom());
+                            break;
+                        case "6":
+                            player.AddPlant(new ThornyCactus());
+                            break;
+                        default:
+                            Console.WriteLine("Invalid choice, please select a valid weapon.");
+                            break;
+                    }
+                    weaponCount++;
+                }
+
                 Console.Clear();
                 Console.WriteLine("                STAGE 1               ");
                 Console.WriteLine("--------------------------------------");
@@ -63,14 +97,15 @@ class Program {
                 string path = Console.ReadLine();
                 path = path.ToUpper();
 
-                switch(path) {
+                switch (path)
+                {
                     case "A":
                         Console.Clear();
                         Console.WriteLine("--------------------------------------");
                         Console.WriteLine("You've encountered a Football Zombie!");
                         Console.WriteLine("--------------------------------------");
                         Thread.Sleep(1000);
-                        Combat.Fight(player, new FootballZombie()); 
+                        Combat.Fight(player, new FootballZombie());
                         break;
                     case "B":
                         Console.Clear();
@@ -100,11 +135,12 @@ class Program {
                         Console.WriteLine("Invalid input");
                         break;
                 }
-                GameSaveLoad.SaveGame(player);                break;
+                GameSaveLoad.SaveGame(player); break;
             case "2":
                 Console.WriteLine("Loading game...");
                 Scientist loadedPlayer = GameSaveLoad.LoadGame();
-                if (loadedPlayer != null) {
+                if (loadedPlayer != null)
+                {
                     Console.WriteLine($"Welcome back, {loadedPlayer.Name}!");
                 }
                 break;
@@ -120,7 +156,8 @@ class Program {
         }
     }
 
-    public static void Story(){
+    public static void Story()
+    {
         Console.WriteLine("You are the last human, a scientist who is trying to save the world from the zombie apocalypse");
         Thread.Sleep(1000);
         Console.WriteLine("Having no weapons, you realized that you have to make your own weapon to fight the zombies");
