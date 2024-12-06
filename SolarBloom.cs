@@ -13,7 +13,7 @@ public class SolarBloom : Entity {
         Description("A plant that provides healing light to its allies.");
     }
 
-    // Skill menyembuhkan sekutu
+    // Skill khusus: Heal Ally
     public void Heal(Entity ally, int healAmount) {
         ally.Health += healAmount;
         Console.WriteLine($"{Name} heals {ally.Name} for {healAmount} health points.");

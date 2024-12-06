@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\April\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\Semester 3\\OOP Kelas\\PvZ-FW-The-Last-Bloom\\game.csproj",
+      "projectUniqueName": "D:\\ima\\SEM 3 BISMILLAH\\OOP\\PVZ Game\\PvZ-FW-The-Last-Bloom\\game.csproj",
       "projectName": "game",
-      "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\Semester 3\\OOP Kelas\\PvZ-FW-The-Last-Bloom\\game.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\Semester 3\\OOP Kelas\\PvZ-FW-The-Last-Bloom\\obj\\",
+      "projectPath": "D:\\ima\\SEM 3 BISMILLAH\\OOP\\PVZ Game\\PvZ-FW-The-Last-Bloom\\game.csproj",
+      "packagesPath": "C:\\Users\\April\\.nuget\\packages\\",
+      "outputPath": "D:\\ima\\SEM 3 BISMILLAH\\OOP\\PVZ Game\\PvZ-FW-The-Last-Bloom\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\April\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"

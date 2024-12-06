@@ -1,9 +1,9 @@
 using ElementType;
 namespace MyNamespace;
 
-public class NigShooter : Entity
+public class NightShooter : Entity
 {
-    public NigShooter()
+    public NightShooter()
     {
         Name = "NightShooter";
         AttackDamage = 20;

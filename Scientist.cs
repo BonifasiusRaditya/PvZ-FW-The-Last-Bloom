@@ -3,10 +3,12 @@ using ElementType;
 
 public class Scientist : Entity {
     public List<Entity> Plants { get; private set; } 
+    public Inventory<Item> Inventory { get; private set; } 
 
     public Scientist(string name) {
         Name = name; 
         Plants = new List<Entity>();
+        Inventory = new Inventory<Item>(4);
         AttackDamage = 1;
         Health = 200;
         Shield = 10;

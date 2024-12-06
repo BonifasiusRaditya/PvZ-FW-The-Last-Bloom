@@ -32,8 +32,20 @@ class Program {
                 Console.Clear();
                 Console.WriteLine("Choose your weapon: ");
                 Console.WriteLine("1. NigShooter");
+                Console.WriteLine("2. FreezePea");
+                Console.WriteLine("3. FireBlaze");
+                Console.WriteLine("4. LightningSnap");
+                Console.WriteLine("5. SolarBloom");
+                Console.WriteLine("6. ThornyCactus");
+                
                 string choiceWeapon = Console.ReadLine();
-                if(choiceWeapon == "1") player.AddItem(new NigShooter());  
+                if(choiceWeapon == "1") player.AddPlant(new NigShooter()); 
+                if(choiceWeapon == "2") player.AddPlant(new FreezePea()); 
+                if(choiceWeapon == "3") player.AddPlant(new FireBlaze()); 
+                if(choiceWeapon == "4") player.AddPlant(new LightningSnap()); 
+                if(choiceWeapon == "5") player.AddPlant(new SolarBloom()); 
+                if(choiceWeapon == "6") player.AddPlant(new ThornyCactus()); 
+                
                 Console.Clear();
                 Console.WriteLine("                STAGE 1               ");
                 Console.WriteLine("--------------------------------------");
