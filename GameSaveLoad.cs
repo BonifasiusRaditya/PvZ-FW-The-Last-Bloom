@@ -45,7 +45,6 @@ namespace MyNamespace {
 
             foreach (var itemName in data.Inventory) {
                 // Tambahkan logika untuk membuat instance Entity dari nama item
-                player.AddItem(new Entity { Name = itemName }); // Ubah sesuai kebutuhan
             }
 
             Console.WriteLine("Game loaded successfully!");

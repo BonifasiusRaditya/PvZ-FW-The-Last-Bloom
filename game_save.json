@@ -1,11 +1,11 @@
 {
-  "PlayerName": "Mel",
-  "PlayerHealth": 25,
-  "PlayerShield": 5,
-  "PlayerExp": 20,
-  "PlayerLevel": 2,
+  "PlayerName": "Asa",
+  "PlayerHealth": 190,
+  "PlayerShield": 7,
+  "PlayerExp": 0,
+  "PlayerLevel": 1,
   "PlayerTypeElement": "Normal",
   "Inventory": [
-    "NigShooter"
+    "FireBlaze"
   ]
 }

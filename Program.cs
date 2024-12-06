@@ -100,8 +100,7 @@ class Program {
                         Console.WriteLine("Invalid input");
                         break;
                 }
-                GameSaveLoad.SaveGame(player);
-                break;
+                GameSaveLoad.SaveGame(player);                break;
             case "2":
                 Console.WriteLine("Loading game...");
                 Scientist loadedPlayer = GameSaveLoad.LoadGame();

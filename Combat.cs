@@ -112,9 +112,6 @@ namespace MyNamespace {
                 if (enemy.Health <= 0) {
                     Console.WriteLine("You defeated the zombie!");
                     player.Exp += enemy.Exp;
-
-                    // Logika Level Up
-                    player.LevelUp();
                     break; // Move break here after level-up and death check.
                 }
             }

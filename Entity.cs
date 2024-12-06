@@ -38,7 +38,8 @@ public class Entity {
     // Critical hit
     public int Critical() {
         int rng = rand.Next(1, 101);
-        if (rng <= 21) {
+        if (rng <= 21
+        ) {
             return 2; // 21% chance for critical hit
         } else {
             return 1;
@@ -116,16 +117,5 @@ public class Entity {
         Console.WriteLine($"Type Element: {TypeElement}");
         Console.WriteLine("====================================");
         Console.WriteLine("");
-    }
-    public void LevelUp() {
-        int nextLevelExp = 100 * (Level + 1); // Level 1 membutuhkan 100 XP, Level 2 membutuhkan 200 XP
-        if (Exp >= nextLevelExp) {
-            Level++;
-            Exp = 0;  // Reset XP or keep remaining XP if needed
-            Health += 50;
-            AttackDamage += 5;
-            Shield += 5;
-            Console.WriteLine($"Level up! You are now level {Level}");
-        }
     }
 }
