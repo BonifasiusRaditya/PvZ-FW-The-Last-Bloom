@@ -73,3 +73,18 @@ D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.
 D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.pdb
 D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.genruntimeconfig.cache
 D:\ima\SEM 3 BISMILLAH\OOP\PVZ Game\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\ref\game.dll
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.exe
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.deps.json
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.runtimeconfig.json
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.dll
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\bin\Debug\net9.0\game.pdb
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.AssemblyInfo.cs
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.sourcelink.json
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.dll
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\refint\game.dll
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.pdb
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\game.genruntimeconfig.cache
+C:\Users\user\OneDrive\Documents\Semester 3\OOP Kelas\PvZ-FW-The-Last-Bloom\obj\Debug\net9.0\ref\game.dll

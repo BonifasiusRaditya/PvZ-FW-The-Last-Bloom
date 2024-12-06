@@ -7,6 +7,7 @@ namespace MyNamespace {
             double multiplier = ElementEffectiveness.GetMultiplier(attackerElement, defenderElement);
             return (int)(baseDamage * multiplier);
         }
+        
 
         private static readonly Random rand = new Random();
 
@@ -57,7 +58,7 @@ namespace MyNamespace {
                                 Entity plant = scientist.Plants[choice - 1];
                                 int damage = CalculateElementDamage(
                                     plant.AttackDamage,
-                                    player.TypeElement,
+                                    plant.TypeElement,
                                     enemy.TypeElement
                                 );
                                 enemy.Health -= damage;

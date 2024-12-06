@@ -11,18 +11,18 @@ public class Entity {
     public Element TypeElement { get; set; }
     private static Random rand = new Random();
     
-    public int Attack(Entity target) {
-        double elementMultiplier = ElementEffectiveness.GetMultiplier(this.TypeElement, target.TypeElement);
-        int criticalMultiplier = Critical(); 
-        int damage = (int)(this.AttackDamage * elementMultiplier * criticalMultiplier);
+    // public int Attack(Entity target) {
+    //     double elementMultiplier = ElementEffectiveness.GetMultiplier(this.TypeElement, target.TypeElement);
+    //     int criticalMultiplier = Critical(); 
+    //     int damage = (int)(this.AttackDamage * elementMultiplier * criticalMultiplier);
 
-        target.TakeDamage(damage);
+    //     target.TakeDamage(damage);
 
-        string criticalInfo = (criticalMultiplier > 1) ? " (Critical Hit!)" : "";
-        Console.WriteLine($"{this.Name} attacked {target.Name} dealing {damage} damage ({ElementEffectiveness.GetEffectivenessDescription(this.TypeElement, target.TypeElement)}){criticalInfo}.");
+    //     string criticalInfo = (criticalMultiplier > 1) ? " (Critical Hit!)" : "";
+    //     Console.WriteLine($"{this.Name} attacked {target.Name} dealing {damage} damage ({ElementEffectiveness.GetEffectivenessDescription(this.TypeElement, target.TypeElement)}){criticalInfo}.");
 
-        return damage;
-    }
+    //     return damage;
+    // }
     
     public virtual void TakeDamage(int damage) {
         int totalDamage = Math.Max(0, damage - Shield); 

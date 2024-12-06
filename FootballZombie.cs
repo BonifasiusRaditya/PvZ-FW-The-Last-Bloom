@@ -16,7 +16,7 @@ public class FootballZombie : Entity {
     public void ChargeAttack(Entity target) {    // Menyerang sebanyak dua kali
         Console.WriteLine($"{Name} used Charge Attack!");
         for (int i = 0; i < 2; i++) {
-            this.Attack(target); 
+            target.TakeDamage (this.AttackDamage);
         }
     }
 
