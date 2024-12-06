@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using ElementType;
 namespace MyNamespace;
 
@@ -8,6 +7,7 @@ public abstract class Item : Entity
     public abstract void Use(Entity target);
 }
 
+// HealingPotion - item for restoring health
 public class HealingPotion : Item
 {
     public int HealAmount { get; private set; }
@@ -27,6 +27,7 @@ public class HealingPotion : Item
     }
 }
 
+// AttackBoost - item for increasing attack damage
 public class AttackBoost : Item
 {
     public int BoostAmount { get; private set; }
@@ -48,6 +49,7 @@ public class AttackBoost : Item
     }
 }
 
+// ShieldUpgrade - item for increasing shield
 public class ShieldUpgrade : Item
 {
     public int ShieldAmount { get; private set; }
@@ -67,16 +69,18 @@ public class ShieldUpgrade : Item
     }
 }
 
+// RareSeed - item for growing a random plant
 public class RareSeed : Item
 {
-    // List of possible plants to grow
+    private static Random random = new Random();
+
     private static List<Func<Entity>> plantFactories = new List<Func<Entity>> {
-        () => new FreezePea(),
-        () => new FireBlaze(),
-        () => new LightningSnap(),
-        () => new SolarBloom(),
-        () => new ThornyCactus()
-    };
+            () => new FreezePea(),
+            () => new FireBlaze(),
+            () => new LightningSnap(),
+            () => new SolarBloom(),
+            () => new ThornyCactus()
+        };
 
     public RareSeed()
     {
@@ -89,11 +93,7 @@ public class RareSeed : Item
     {
         if (target is Scientist scientist)
         {
-            // Generate a random plant
-            Random random = new Random();
             Entity newPlant = plantFactories[random.Next(plantFactories.Count)]();
-
-            // Add the new plant to the scientist's inventory
             scientist.AddPlant(newPlant);
             Console.WriteLine($"{Name} sprouted into {newPlant.Name}!");
         }

@@ -1,18 +1,21 @@
 using System;
+using System.Collections.Generic;
 namespace MyNamespace;
 
-public class Inventory
+// Generic Inventory class for storing items
+public class Inventory<T> where T : Item
 {
-    private List<Entity> items;
+    private List<T> items;
     private int capacity;
 
     public Inventory(int capacity)
     {
         this.capacity = capacity;
-        items = new List<Entity>();
+        items = new List<T>();
     }
 
-    public bool AddItem(Entity item)
+    // Add item to inventory
+    public bool AddItem(T item)
     {
         if (items.Count < capacity)
         {
@@ -27,7 +30,8 @@ public class Inventory
         }
     }
 
-    public bool RemoveItem(Entity item)
+    // Remove item from inventory
+    public bool RemoveItem(T item)
     {
         if (items.Contains(item))
         {
@@ -42,6 +46,7 @@ public class Inventory
         }
     }
 
+    // Display all items in the inventory
     public void DisplayInventory()
     {
         Console.WriteLine("Inventory List:");
@@ -50,4 +55,19 @@ public class Inventory
             Console.WriteLine($"- {item.Name} (Type: {item.GetType().Name})");
         }
     }
+
+    // Use an item from the inventory
+    public void UseItem(int index, Entity target)
+    {
+        if (index >= 0 && index < items.Count)
+        {
+            T item = items[index];
+            item.Use(target);  
+        }
+        else
+        {
+            Console.WriteLine("Invalid item index.");
+        }
+    }
 }
+

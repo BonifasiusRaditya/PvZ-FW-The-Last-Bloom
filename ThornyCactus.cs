@@ -12,4 +12,11 @@ public class ThornyCactus : Entity {
         TypeElement = Element.Normal;
         Description("A tough plant with sharp thorns that counterattacks.");
     }
+
+    // Skill setelah menerima serangan, plant memberikan counterattacks
+    public override void TakeDamage(int damage) {
+        base.TakeDamage(damage);
+        int counterDamage = 10;
+        Console.WriteLine($"{Name} counterattacks, dealing {counterDamage} damage to its attacker.");
+    }
 }
