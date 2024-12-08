@@ -47,16 +47,16 @@ class Program
                     Console.WriteLine("| 3. Exit to Main Menu             |");
                     Console.WriteLine("====================================");
                     Console.Write("Choose: ");
-                    string questChoice = Console.ReadLine();
+                    string Choice = Console.ReadLine();
 
-                    switch (questChoice)
+                    switch (Choice)
                     {
                         case "1":
                             MainMission.Start(player); // Memanggil MainMission
                         break;
                         case "2":
                             SideQuest.Start(player); // Memanggil SideQuest
-                        return; // Keluar dari loop setelah Main Mission
+                        break; // Keluar dari loop setelah Main Mission
                         case "3":
                             Console.WriteLine("Returning to the main menu...");
                             Thread.Sleep(1000);
@@ -73,6 +73,37 @@ class Program
                 {
                     Console.WriteLine($"Welcome back, {loadedPlayer.Name}!");
                 }
+                Console.Clear();
+                    Console.WriteLine("====================================");
+                    Console.WriteLine("| 1. Main Mission                  |");
+                    Console.WriteLine("| 2. Side Quest                    |");
+                    Console.WriteLine("| 3. Use Rare Seed                 |");
+                    Console.WriteLine("| 4. Exit to Main Menu             |");
+                    Console.WriteLine("====================================");
+                    Console.Write("Choose: ");
+                    string questChoice = Console.ReadLine();
+
+                    switch (questChoice)
+                    {
+                        case "1":
+                            MainMission.Start(loadedPlayer); // Memanggil MainMission
+                        break;
+                        case "2":
+                            SideQuest.Start(loadedPlayer); // Memanggil SideQuest
+                        return; // Keluar dari loop setelah Main Mission
+                        case "3":
+                            Console.Clear();
+                            Console.WriteLine("Opening inventory...");
+                            Thread.Sleep(500);
+            break;
+                        case "4":
+                            Console.WriteLine("Returning to the main menu...");
+                            Thread.Sleep(1000);
+                        return; // Kembali ke menu utama
+                        default:
+                            Console.WriteLine("Invalid input, please try again.");
+                        break;
+                    }
                 break;
             case "4":
                 Console.WriteLine("Exiting game...");

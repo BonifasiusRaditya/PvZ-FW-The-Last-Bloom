@@ -1,24 +1,102 @@
 using System;
-using ElementType;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using MyNamespace;
 
-class SideQuest
+public class SideQuest
 {
     public static void Start(Scientist player)
     {
         Console.Clear();
-        Console.WriteLine("You chose a Side Quest!");
-        Console.WriteLine("Your task is to collect rare plant seeds guarded by zombies.");
-        Console.WriteLine("Prepare yourself for battle!");
+        Console.WriteLine("========================================================");
+        Console.WriteLine("| Selamat Datang ke Cerdas Cermat Tingkat Internasiona; |");
+        Console.WriteLine("|          Earth Branch - Challenge Dr. Zombie          |");
+        Console.WriteLine("========================================================");
         Thread.Sleep(1000);
 
-        // Contoh encounter di side quest
-        Console.WriteLine("--------------------------------------");
-        Console.WriteLine("You've encountered a Swarm of Basic Zombies!");
-        Console.WriteLine("--------------------------------------");
-        Combat.Fight(player, new ());
-        
-        Console.WriteLine("You successfully completed the Side Quest and collected rare seeds!");
-        Thread.Sleep(1000);
+        // Pertanyaan dan jawaban
+        var questions = new List<(string Question, string Answer)>
+        {
+            ("What is the chemical symbol for water?", "H2O"),
+            ("What planet is known as the Red Planet?", "Mars"),
+            ("What is the powerhouse of the cell?", "Mitochondria"),
+            ("Who developed the theory of relativity?", "Einstein"),
+            ("What is the speed of light (in m/s)?", "299792458"),
+            ("Amanjiwo terletak dimana?", "Magelang"),
+            ("Who is the infamous Detective who lives in BAker Street 221B", "Sherlock Holmes"),
+            ("What is the first words of Jabberwocky", "Twas"),
+            ("What is the largest country in the world", ""),
+            ("What animals that not only embraces democracy, but also seniority?", "Cockroach")
+        };
+
+        // Shuffle pertanyaan
+        var random = new Random();
+        var shuffledQuestions = questions.OrderBy(_ => random.Next()).ToList();
+
+        int playerScore = 0;
+        int drZombieScore = 0;
+
+        // Quiz loop
+        for (int i = 0; i < 5; i++)
+        {
+            var (question, correctAnswer) = shuffledQuestions[i];
+            Console.WriteLine($"Round {i + 1}:");
+            Console.WriteLine($"Question: {question}");
+            Console.Write("Your Answer: ");
+
+            string playerAnswer = Console.ReadLine()?.Trim().ToLower();
+
+            // Pemain menjawab
+            if (string.Equals(playerAnswer, correctAnswer, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Correct!");
+                playerScore++;
+            }
+            else
+            {
+                Console.WriteLine($"Wrong! The correct answer is {correctAnswer}.");
+            }
+
+            // Dr. Zombie menjawab
+            bool drZombieCorrect = random.Next(2) == 0; // 50% kemungkinan benar
+            if (drZombieCorrect)
+            {
+                drZombieScore++;
+                Console.WriteLine("Dr. Zombie answered correctly!");
+            }
+            else
+            {
+                Console.WriteLine("Dr. Zombie answered incorrectly.");
+            }
+
+            Console.WriteLine($"Score - You: {playerScore}, Dr. Zombie: {drZombieScore}");
+            Thread.Sleep(1000);
+        }
+
+        // Hasil akhir
+        Console.WriteLine("====================================");
+        Console.WriteLine("Final Scores:");
+        Console.WriteLine($"You: {playerScore}");
+        Console.WriteLine($"Dr. Zombie: {drZombieScore}");
+        Console.WriteLine("====================================");
+
+        if (playerScore > drZombieScore)
+        {
+            Console.WriteLine("Congratulations! You defeated Dr. Zombie in the quiz!");
+            Console.WriteLine("Reward: XP and a Legendary Rare Seed");
+            player.AddXP(100); // Tambahkan XP ke pemain
+            player.AddItem(new RareSeed()); // Tambahkan Rare Seed ke inventaris
+            Console.WriteLine("Returning to the main menu...");
+            Thread.Sleep(2000);
+            return;
+        }
+        else
+        {
+            Console.WriteLine("You lost to Dr. Zombie. Better luck next time!");
+            Console.WriteLine("Returning to the main menu...");
+            Thread.Sleep(2000);
+            return; // Kembali ke menu utama
+        }
     }
 }

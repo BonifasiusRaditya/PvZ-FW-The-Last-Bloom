@@ -2,7 +2,7 @@ using MyNamespace;
 using ElementType;
 
 public class Scientist : Entity {
-    public List<Entity> Plants { get; private set; } 
+    public List<Entity> Plants { get; private set; } = new List<Entity>();
     public Inventory<Item> Inventory { get; private set; } 
 
     public Scientist(string name) {
@@ -28,9 +28,14 @@ public class Scientist : Entity {
     }
 
     public void AddItem(Item item) {
-        if (Inventory.AddItem(item)) {
+        Inventory.AddItem(item);
             Console.WriteLine($"{item.Name} added to your item inventory.");
-        }
+        
+    }
+    public void PlantJoined(Item plant)
+    {
+        
+        Console.WriteLine($"{plant.Name} has joined your garden!");
     }
 
     public void RemovePlant(Entity plant) {
