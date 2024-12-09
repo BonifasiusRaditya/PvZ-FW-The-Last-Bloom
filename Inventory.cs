@@ -20,7 +20,7 @@ namespace MyNamespace
             if (items.Count < capacity)
             {
                 items.Add(item);
-                Console.WriteLine($"{item.Name} added to inventory.");
+
                 return true;
             }
             else

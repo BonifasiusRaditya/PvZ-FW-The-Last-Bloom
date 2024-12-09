@@ -56,11 +56,11 @@ namespace MyNamespace
                     {
                         if (scientist.Plants.Count > 0)
                         {
-                            Console.WriteLine("Choose a plant to attack:");
                             for (int i = 0; i < scientist.Plants.Count; i++)
                             {
                                 Console.WriteLine($"{i + 1}. {scientist.Plants[i].Name}");
                             }
+                            Console.WriteLine("Choose a plant to attack:");
 
                             int choice;
                             if (int.TryParse(Console.ReadLine(), out choice) && choice > 0 && choice <= scientist.Plants.Count)
@@ -123,6 +123,16 @@ namespace MyNamespace
                                         waterZombie.Drench(player);  // Panggil Drench untuk WaterZombie
                                     }
                                 }
+
+                                // Hapus tanaman dari inventory setelah digunakan
+                                if (plant is Item itemPlant)
+                                {
+                                    scientist.Inventory.RemoveItem(itemPlant);  // Hapus item jika plant merupakan Item
+                                }
+
+
+                                // Hapus tanaman dari daftar tanaman setelah digunakan
+                                scientist.Plants.RemoveAt(choice - 1);
                             }
                             else
                             {
@@ -135,6 +145,7 @@ namespace MyNamespace
                         }
                     }
                 }
+
 
                 // Pemain menggunakan item (Health Potion atau Shield Upgrade)
                 else if (option == "use item")
@@ -218,7 +229,7 @@ namespace MyNamespace
                     {
                         Console.WriteLine($"{enemy.Name} attacked you directly!");
                     }
-                    
+
                     player.Health -= enemyDamage;
                     if (rand.Next(1, 101) <= 15)
                     { // 15% chance untuk memberi debuff

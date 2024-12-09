@@ -6,8 +6,23 @@ using MyNamespace;
 
 public class SideQuest
 {
+    // Variabel untuk menghitung berapa kali quest ini diakses
+    private static int questAccessCount = 0;
+    private const int maxQuestAccess = 3;
+
     public static void Start(Scientist player)
     {
+        if (questAccessCount >= maxQuestAccess)
+        {
+            Console.WriteLine("====================================");
+            Console.WriteLine("Report: The quiz has already been completed 3 times.");
+            Console.WriteLine("You can no longer access the Cerdas Cermat Challenge.");
+            Console.WriteLine("Returning to the main menu...");
+            Thread.Sleep(2000);
+            return; 
+        }
+        questAccessCount++;
+
         Console.Clear();
         Console.WriteLine("========================================================");
         Console.WriteLine("| Selamat Datang ke Cerdas Cermat Tingkat Internasiona; |");
@@ -26,7 +41,7 @@ public class SideQuest
             ("Amanjiwo terletak dimana?", "Magelang"),
             ("Who is the infamous Detective who lives in BAker Street 221B", "Sherlock Holmes"),
             ("What is the first words of Jabberwocky", "Twas"),
-            ("What is the largest country in the world", ""),
+            ("What is the largest country in the world", "Russia"),
             ("What animals that not only embraces democracy, but also seniority?", "Cockroach")
         };
 
@@ -38,7 +53,7 @@ public class SideQuest
         int drZombieScore = 0;
 
         // Quiz loop
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 3; i++)
         {
             var (question, correctAnswer) = shuffledQuestions[i];
             Console.WriteLine($"Round {i + 1}:");
@@ -85,18 +100,19 @@ public class SideQuest
         {
             Console.WriteLine("Congratulations! You defeated Dr. Zombie in the quiz!");
             Console.WriteLine("Reward: XP and a Legendary Rare Seed");
-            player.AddXP(100); // Tambahkan XP ke pemain
-            player.AddItem(new RareSeed()); // Tambahkan Rare Seed ke inventaris
+
+            player.AddXP(100); // Menambahkan XP
+
+            // Membuat dan memberikan RareSeed kepada pemain
+            RareSeed rareSeed = new RareSeed();
+            player.AddPlant(rareSeed); 
+            
+            Console.WriteLine("You have received a Rare Seed!");
+            rareSeed.Use(player); 
+
             Console.WriteLine("Returning to the main menu...");
-            Thread.Sleep(2000);
+            Thread.Sleep(5000);
             return;
-        }
-        else
-        {
-            Console.WriteLine("You lost to Dr. Zombie. Better luck next time!");
-            Console.WriteLine("Returning to the main menu...");
-            Thread.Sleep(2000);
-            return; // Kembali ke menu utama
         }
     }
 }

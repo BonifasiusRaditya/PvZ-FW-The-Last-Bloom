@@ -7,7 +7,7 @@ public class Scientist : Entity {
 
     public Scientist(string name) {
         Name = name; 
-        Plants = new List<Entity>(4); //batas kapasitas plants 4
+        Plants = new List<Entity>(7); //batas kapasitas plants 4
         Inventory = new Inventory<Item>(2); //kapsistas untuk healing potion dan shield upgrade
 
         AttackDamage = 1;
@@ -19,8 +19,8 @@ public class Scientist : Entity {
     }
 
     public void AddPlant(Entity plant) {
-        if (Plants.Count >= 4) {  // maksimal 4 tanaman
-            Console.WriteLine("You cannot carry more than 4 plants into battle.");
+        if (Plants.Count >= 7) {  // maksimal 7 tanaman
+            Console.WriteLine("You cannot carry more than 7 plants into battle.");
             return;
         }
         Plants.Add(plant);

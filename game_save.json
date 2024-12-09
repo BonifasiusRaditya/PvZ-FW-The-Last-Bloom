@@ -1,14 +1,13 @@
 {
-  "PlayerName": "Mal",
-  "PlayerHealth": 170,
+  "PlayerName": "ma",
+  "PlayerHealth": 200,
   "PlayerShield": 10,
-  "PlayerExp": 20,
+  "PlayerExp": 0,
   "PlayerLevel": 1,
   "PlayerTypeElement": "Normal",
   "Inventory": [
-    "LightningSnap",
-    "LightningSnap",
-    "LightningSnap",
+    "FreezePea",
+    "FireBlaze",
     "LightningSnap"
   ]
 }

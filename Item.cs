@@ -93,8 +93,10 @@ public class RareSeed : Item
     {
         if (target is Scientist scientist)
         {
+            
+            // Membuat tanaman baru secara acak
             Entity newPlant = plantFactories[random.Next(plantFactories.Count)]();
-            scientist.AddPlant(newPlant);
+            scientist.AddPlant(newPlant); // Menambahkan tanaman ke koleksi pemain
             Console.WriteLine($"{Name} sprouted into {newPlant.Name}!");
         }
         else
@@ -102,5 +104,6 @@ public class RareSeed : Item
             Console.WriteLine($"{Name} can only be used by a Scientist.");
         }
     }
+
 }
 
